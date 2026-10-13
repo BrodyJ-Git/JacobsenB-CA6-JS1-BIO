@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Brody">
+        <link href="css/style.css" rel="stylesheet">
+        <title>Bear Ninja Hunter</title>
+    </head>
+    <body> 
+        <script> <!-- Prompts the user and greets them -->
+            const playerName = prompt('Welcome to Bear Hunter Ninja! Please enter your name to get started: ');
+            alert(`Hi ${playerName}! Let\'s Play!!`);
+        </script>
+
+        <p id="prompt1"></p> <!--Will be replaced with prompt1 -->
+        <p id="prompt2"></p> <!--Will be replaced with prompt2 -->
+        <script>
+             <!-- prompts the player and saves choice to prompt -->
+            let playerChoice = prompt('Who are you: Bear, Ninja, or Hunter?');
+            let playerResult = `${playerName}, You picked ${playerChoice}`;
+            let computerResult = `The computer picked Bear!`;
+
+            <!-- sends choice to console and replaces prompts on html page -->
+            console.log(playerResult);
+            console.log(computerResult);
+            document.getElementById("prompt1").innerHTML = playerResult;
+            document.getElementById("prompt2").innerHTML = computerResult;
+        </script>
+    </body>
+</html>
